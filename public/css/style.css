@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2s ease-out;
+}
+body{
+    background-image: url("../images/2.jpg");
+    /* background:linear-gradient(rgb(11, 141, 106),rgb(233, 237, 236)); */
+    padding: 20px 8%;
+    box-sizing: border-box;
+}
+.container{
+    position:relative;
+    background: #FFF;
+    border-radius: 5px; 
+    box-shadow: 0 .5rem  1rem rgba(0, 0, 0, .2);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 7%;
+    position: relative;
+    z-index: 1000;
+}
+header .logo{
+    font-size: 34px;
+    color: rgb(11, 141, 106);
+}
+header .logo span{
+    color: black;
+}
+header #menu{
+    display: none; 
+    padding: 10px 10px;
+    border: 2px solid rgba(0, 0, 0,.2);
+    font-size: 20px;
+    border-radius: 5px;
+    color: rgb(161, 155, 155);
+}
+header .navbar a{
+    margin-left: 20px;
+    font-size: 25px;
+    color: rgb(85, 83, 83);
+}
+header .page1 a{
+    font-size: 25px;
+    color: rgb(11, 141, 106);
+
+}
+header .page1 i{
+    padding: 15px;
+}
+header .navbar a:hover{
+    background-color:rgb(11, 141, 106); 
+    padding: 15px;
+    color: #FFF;
+    border-radius: 4px;
+}
+@media (max-width:768px) {
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #FFF;
+        border-top: 1px solid rgba(0, 0, 0,.2);
+        border-bottom: 1px solid rgba(0, 0, 0,.2); 
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,  0 100% );
+    } 
+    header .navbar a{
+        font-size: 30px;
+        display: block;
+        text-align: center; 
+        margin: 2rem 0;
+        color: rgb(146, 142, 142);
+    }
+
+    header #menu{
+        display: initial;
+    }
+    
+}
+.corps {
+  position: relative;
+}
+
+.texte_centrer {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-size: 30px;
+
+}
+.texte_centrer  h1{
+    text-transform: uppercase;
+}
+video{
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
