@@ -98,14 +98,32 @@ header .navbar a:hover{
 .texte_centrer {
     position: absolute;
     top: 32%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     color: #FFF;
-    font-size: 30px;
+    font-size: 35px;
+    width: 80%;
 
 }
-.texte_centrer  h1{
-    text-transform: uppercase;
+.texte_centrer  p{
+    /* text-transform: uppercase; */
+    text-align: center;
+    padding: 20px;
+}
+.bale i{
+    /* position: absolute; */
+    color: rgb(222, 210, 210);
+    padding: 20px;
+}
+.texte_centrer input{
+    padding: 30px;
+    border-radius: 5px;
+    width: 50%;
+}
+.texte_centrer button{
+     padding: 30px; 
+    background-color:rgb(11, 141, 106) ;
+    border-radius: 5px;
 }
 video{
     width: 100%;
