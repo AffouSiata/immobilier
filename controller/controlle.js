@@ -3,6 +3,8 @@ const express = require("express");
 const { connect } = require("../Bdd/data");
 const router = require("../Route/route");
 const data = require('../requete/requete');
+const { request } = require("express");
+const { response } = require("express");
 
 
 
@@ -34,9 +36,7 @@ const controlle = class{
             console.log("mon errreur",error);
         })
        
-        // console.log(req.body);
-        
-      
+        // console.log(req.body);  
     }
     static loginpost =(req=request,res=response)=>{
         data.connection(req.body).then(success=>{
@@ -47,7 +47,20 @@ const controlle = class{
             console.log("erreur a la connexion");
         })
     }
-        
+    static adminpost =(req=request,res=response)=>{
+        data.admin(req.body,req.file).then(succes=>{
+            let inser=succes.insertId;
+            console.log("innn",inser);
+            res.render('../view/autre')
+        })
+        .catch(error=>{
+            console.log("errror",error);
+        })
+    
+    } 
+    static enregistre =(req=request,res=response)=>{
+        let
+    }
 
 }
 

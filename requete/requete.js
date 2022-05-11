@@ -63,6 +63,29 @@ const data =class{
      }
 
 
+     static admin = (detail,photo)=>{
+         let {type_de_biens, pieces, commune, nom_du_bien, date_post, bain, environnement, bien_propose, prestation, region, pays, prix}=detail
+        console.log("ppppppp",photo.path);
+        let quete = "INSERT INTO `details`( `type_de_biens`, `pieces`, `commune`, `nom_du_bien`, `date_post`, `bain`, `environnement`, `bien_propose`, `prestation`, `region`, `pays`, `prix`, `photo`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        return new Promise((resolve,reject)=>{ 
+            connect.query(quete,[type_de_biens, pieces, commune, nom_du_bien, date_post, bain, environnement, bien_propose, prestation, region, pays, prix, photo.path],function(error,resultat){
+                
+                if(error)
+                { 
+                reject(error)
+                console.log("erreur d'insection");
+                }                        
+            else{
+                resolve(resultat)
+                console.log('insection reussie',resultat);
+            }
+                
+            })
+        })
+    }
+ƒ
+
+
 
 }
 module.exports=data;

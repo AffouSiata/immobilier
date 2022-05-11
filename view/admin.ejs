@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/encore.css">
+    <link rel="stylesheet" href="../public/css/admin.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <div>
-            <h1>Ma page Dashoard</h1>
-        </div>
+       <form action="/admin" method="post" enctype="multipart/form-data">
+         
+            <!-- <div><input type="text" name="titre" placeholder="titre"></div> -->
+            <div><input type="text" name="type_de_biens" placeholder="type_bien"></div>
+            <div><input type="text" name="pieces" placeholder="pieces"></div>
+            <div><input type="text" name="commune" placeholder="commune"></div>
+            <div><input type="text" name="nom_du_bien" placeholder="nom_bien"></div>
+            <!-- <div><input type="text" name="nbre_chbre" placeholder="nbre_chbre"></div> -->
+            <div><input type="date" name="date_post" placeholder="date_post"></div>
+            <div><input type="text" name="bain" placeholder="bain"></div>
+            <div><input type="text" name="environnement" placeholder="environ"></div>
+            <div><input type="text" name="bien_propose" placeholder="bien_propo"></div>
+            <div><input type="text" name="prestation" placeholder="prestation"></div>
+            <div><input type="text" name="region" placeholder="region"></div>
+            <div><input type="text" name="pays" placeholder="pays"></div>
+            <div><input type="text" name="prix" placeholder="prix"></div>
+            <div><input type="file" name="photo" placeholder="photo"></div>
+            <div><input type="submit"></div>
+       </form>
     </div>
 </body>
 </html>
